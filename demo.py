@@ -16,7 +16,7 @@ from deep_sort.detection import Detection
 from deep_sort.tracker import Tracker
 from tools import generate_detections as gdet
 import imutils.video
-from videocaptureasync import VideoCaptureAsync
+from deep_sort.videocaptureasync import VideoCaptureAsync
 
 warnings.filterwarnings('ignore')
 
@@ -37,7 +37,7 @@ def main(yolo):
     writeVideo_flag = True
     asyncVideo_flag = False
 
-    file_path = 'video.webm'
+    file_path = 'trackervideo.mp4'
     if asyncVideo_flag :
         video_capture = VideoCaptureAsync(file_path)
     else:
